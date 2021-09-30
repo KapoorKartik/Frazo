@@ -5,62 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fraazo</title>
-
-    <style>
-      /*     div {
-            border: 1px solid red;
-        }
-        div > div {
-            border: 1px solid green; 
-        } */
-      .navbar {
-        height: 50px;
-        max-width: 90%;
-        display: flex;
-        margin: 10px auto;
-      }
-      #logo {
-        min-width: 120px;
-        margin: 0 10px;
-        height: 30px;
-      }
-      #input_box {
-        flex-grow: 2;
-        margin: 10px;
-        border-radius: 20px;
-        max-width: 50%;
-        height: 40px;
-        margin: 10px auto;
-        border: 1px solid grey;
-        display: flex;
-      }
-      #input_box > input {
-        width: 90%;
-        outline: none;
-        border: none;
-        background-color: transparent;
-        margin-left: 2%;
-        height : 20px;
-        margin-top : 10px;
-      }
-      .icons {
-        width: 80px;
-        height: 25px;
-        margin: 1.2%;
-        display: flex;
-        margin-top: 15px;
-      }
-      .icons > div {
-        margin-left: 10px;
-        font-size: 18px;
-        margin-top: 5px;
-        
-      }
-      .search_img {
-        height : 20px;
-        margin-top : 10px;
-      }
-    </style>
+<link rel="stylesheet" href="homepage.css">
   </head>
   <body>
     <div class="navbar">
@@ -70,11 +15,40 @@
           alt=""
         />
       </div>
-      <div class="icons ">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-        width="20" height="20"
-        viewBox="0 0 172 172"
-        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="original-icon" fill="#666666"><path d="M86,3.44c-30.34187,0 -55.04,24.69813 -55.04,55.04c0,48.54969 50.32344,106.45188 52.46,108.8975c0.65844,0.7525 1.58563,1.1825 2.58,1.1825c1.06156,-0.06719 1.92156,-0.43 2.58,-1.1825c2.13656,-2.48594 52.46,-61.3825 52.46,-108.8975c0,-30.34187 -24.69812,-55.04 -55.04,-55.04zM86,41.28c11.395,0 20.64,9.245 20.64,20.64c0,11.395 -9.245,20.64 -20.64,20.64c-11.395,0 -20.64,-9.245 -20.64,-20.64c0,-11.395 9.245,-20.64 20.64,-20.64z"></path></g></g></svg>
+      <div class="icons">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="20"
+          height="20"
+          viewBox="0 0 172 172"
+          style="fill: #000000"
+        >
+          <g
+            fill="none"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <path d="M0,172v-172h272v172z" fill="none"></path>
+            <g id="original-icon" fill="#666666">
+              <path
+                d="M86,3.44c-30.34187,0 -55.04,24.69813 -55.04,55.04c0,48.54969 50.32344,106.45188 52.46,108.8975c0.65844,0.7525 1.58563,1.1825 2.58,1.1825c1.06156,-0.06719 1.92156,-0.43 2.58,-1.1825c2.13656,-2.48594 52.46,-61.3825 52.46,-108.8975c0,-30.34187 -24.69812,-55.04 -55.04,-55.04zM86,41.28c11.395,0 20.64,9.245 20.64,20.64c0,11.395 -9.245,20.64 -20.64,20.64c-11.395,0 -20.64,-9.245 -20.64,-20.64c0,-11.395 9.245,-20.64 20.64,-20.64z"
+              ></path>
+            </g>
+          </g>
+        </svg>
         <div>Delhi</div>
       </div>
       <div id="input_box">
@@ -97,12 +71,259 @@
         <img src="https://img.icons8.com/ios-glyphs/30/000000/wallet.png" />
         <div>Credit</div>
       </div>
-      <div class="icons">
+      <div class="icons" id='login_btn'>
         <img
           src="https://img.icons8.com/material-rounded/30/000000/guest-male.png"
         />
-        <div>Login</div>
+        <div id='login_text'>Login</div>
       </div>
     </div>
+    <hr>
+    <div id="login">
+      <h2>Hello New Customer</h2>
+      <h4>Regester now for Unbelievable Discounts.</h4>
+      <input type="text" placeholder="First Name">
+      <input type="text" placeholder="Last Name"><br><br>
+      <input type="text" placeholder="Email Id"><br><br>
+      <input type="text" placeholder='Mobile Number'><br><br>
+
+      <button id="sumbit_btn">Sumbit</button>
+    </div>
+    <!-- just below the navbar include slide on left side and three small images on right side  -->
+    <div id="below_navbar">
+      <div id="slide"></div>
+
+      <div id="small_images_right">
+        <img
+          src="https://www.fraazo.com/static/Web1-69eeea6f4957bbfe25e0d21b419fbe2e.png"
+          alt=""
+        />
+        <img
+          src="https://www.fraazo.com/static/Web2-7001a7e3d79331ebe1afab0fdc0de5f1.png"
+          alt=""
+        />
+        <img
+          src="https://www.fraazo.com/static/Web3-8a2cac70c2c66c57bb0bb0d8f51e9369.png"
+          alt=""
+        />
+      </div>
+    </div>
+  <div id="main_content">
+    <div class="heading">BEST DEALS</div>
+    <hr>
+    <div id="products"></div>
+  </div>
   </body>
 </html>
+
+<script>
+  let images = [
+    "https://s3.ap-south-1.amazonaws.com/fraazo-prod/web_ban/229.png?1628334246",
+    "https://s3.ap-south-1.amazonaws.com/fraazo-prod/web_ban/261.png?1630922221",
+    "https://s3.ap-south-1.amazonaws.com/fraazo-prod/web_ban/248.png?1630126966",
+    "https://s3.ap-south-1.amazonaws.com/fraazo-prod/web_ban/225.png?1627980336",
+    "https://s3.ap-south-1.amazonaws.com/fraazo-prod/web_ban/244.png?1629706165",
+    "https://s3.ap-south-1.amazonaws.com/fraazo-prod/web_ban/230.png?1632828791",
+    "https://s3.ap-south-1.amazonaws.com/fraazo-prod/web_ban/227.png?1628103608",
+    "https://s3.ap-south-1.amazonaws.com/fraazo-prod/web_ban/110.png?1613390840",
+  ];
+
+  let slide = document.getElementById("slide");
+
+  let img = document.createElement("img");
+  img.src = images[0];
+  slide.append(img);
+  let count = 1;
+  function slideShow() {
+    setInterval(function () {
+      img.innerHTML = "";
+
+      if (count === images.length) {
+        // reset the count
+        count = 0;
+      }
+
+      img.src = images[count];
+
+      slide.append(img);
+      count++;
+    }, 5000);
+  }
+  slideShow();
+
+  // login btn functionality
+  let login_btn = document.getElementById("login_btn")
+  let login = document.getElementById("login")
+  let remove = document.getElementById('sumbit_btn')
+  let login_text = document.getElementById("login_text")
+  function showLogin() {
+    setTimeout(function(){
+      login.style.display = 'block'
+    },1500)
+    
+  }
+  function removeLogin() {
+    setTimeout(function(){
+      login.style.display = 'none'
+    },1500)
+    
+  }
+  function changeColor() {
+    login_text.style.color = 'black'
+  }
+  function reverseColor(){
+    login_text.style.color = 'gray';
+  }
+login_btn.addEventListener('click',showLogin);
+remove.addEventListener('click', removeLogin);
+
+login_btn.addEventListener('mouseover',changeColor)
+login_btn.addEventListener('mouseout', reverseColor)
+
+// functionality of login button is complete
+
+/*
+ main content 
+ step 1: create an array of objects including image , name , quantity & price as properties #complete
+ step 2 : append this inside main_content div having 5*2 grid 
+ step 3 : append add to cart button also
+ step 4 : give this button fuctionality
+       4.1 : if add to cart click first time add object into local storage
+       4.2 : if btn is click more than one time only update the price  of the object 
+*/
+
+let data = [
+  {
+    name : 'Bitter Gourd (Karela)',
+    quantity : '250 g',
+    price : '8',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+  },
+  {
+    name : 'Banana',
+    quantity : '1 kg',
+    price : '10',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/FBAN14.png'
+  },
+  {
+    name : 'Bitter Gourd (Karela)',
+    quantity : '250 g',
+    price : '8',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+  },
+  {
+    name : 'Bitter Gourd (Karela)',
+    quantity : '250 g',
+    price : '8',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+  },
+  {
+    name : 'Bitter Gourd (Karela)',
+    quantity : '250 g',
+    price : '8',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+  },
+  {
+    name : 'Bitter Gourd (Karela)',
+    quantity : '250 g',
+    price : '8',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+  },
+  {
+    name : 'Bitter Gourd (Karela)',
+    quantity : '250 g',
+    price : '8',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+  },
+  {
+    name : 'Bitter Gourd (Karela)',
+    quantity : '250 g',
+    price : '8',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+  },
+  {
+    name : 'Bitter Gourd (Karela)',
+    quantity : '250 g',
+    price : '8',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+  },
+  {
+    name : 'Bitter Gourd (Karela)',
+    quantity : '250 g',
+    price : '8',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+  },
+]
+let parent = document.getElementById('products')
+function showProduct(data) {
+
+  data.forEach(function(product){
+    // console.log(product.name)
+
+    let div = document.createElement('div')
+
+    let image = document.createElement('img')
+    image.src = product.image
+
+    let product_price = document.createElement('p')
+    product_price.textContent = '₹' + product.price;
+
+    let product_name = document.createElement('p')
+    product_name.textContent = product.name;
+
+    let product_quantity = document.createElement('p')
+    product_quantity.textContent = product.quantity
+
+    let addtocart_btn = document.createElement('button')
+addtocart_btn.textContent = "Add to cart"
+   let counter = 1;
+addtocart_btn.onclick = function(){
+  
+    addtoCart(product,counter)
+    counter++
+
+}
+div.append(image,product_name,product_quantity,product_price,addtocart_btn)
+
+parent.append(div)
+  })
+ 
+}
+showProduct(data) 
+//create local storage 
+
+if (localStorage.getItem('fraazo_cart') === null) {
+  localStorage.setItem('fraazo_cart', JSON.stringify([]))
+}
+
+
+// adding clicked data to local storage
+function addtoCart(product,counter) {
+  let product_cart = JSON.parse(localStorage.getItem('fraazo_cart'))
+let duplicate = 'No'
+
+// create this duplicate flag to stop add duplicate items inside the cart & counter to update price every time duplicate item pressed
+
+  for (let i = 0 ; i < product_cart.length ; i++) {
+    
+        if (product_cart[i].name === product.name) {
+         
+         
+          product_cart[i].price = +product.price* counter ;
+           
+           duplicate = 'Yes'
+          //  console.log('count',counter)
+        }
+      
+    }
+        if (duplicate === 'No') {
+          product_cart.push(product)
+        }
+       
+
+  localStorage.setItem("fraazo_cart",JSON.stringify(product_cart))
+    // console.log(product_cart);
+
+}
+
+</script>
