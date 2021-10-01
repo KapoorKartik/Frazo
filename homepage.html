@@ -61,15 +61,15 @@
           src="https://img.icons8.com/ios/20/000000/search--v1.png"
         />
       </div>
-      <div class="icons location_box">
+      <div class="icons " id='cart_btn'>
         <img
           src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/30/000000/external-shopping-cart-interface-kiranshastry-solid-kiranshastry-1.png"
         />
-        <div>Cart</div>
+        <div id='cart_text'>Cart</div>
       </div>
       <div class="icons">
         <img src="https://img.icons8.com/ios-glyphs/30/000000/wallet.png" />
-        <div>Credit</div>
+        <div >Credit</div>
       </div>
       <div class="icons" id='login_btn'>
         <img
@@ -79,10 +79,27 @@
       </div>
     </div>
     <hr>
+    <div id='cart_box'>
+      <div>
+        <div id='clear'>X</div>
+        <h3 id='cart_heading'></h3>
+        
+      </div>
+      <div id="cart_product"></div>
+      <div id="total">
+      <div> 
+         <div id="total_items"></div>
+      <div id="total_price"></div>
+    </div>
+        <a href="payment.html" id='checkout'> 
+          <button id="checkout_btn" class="btn2">Checkout</button>
+       </a><br>
+      </div>
+    </div>
     <div id="login">
       <h2>Hello New Customer</h2>
       <h4>Regester now for Unbelievable Discounts.</h4>
-      <input type="text" placeholder="First Name">
+      <input id='first_name' type="text" placeholder="First Name">
       <input type="text" placeholder="Last Name"><br><br>
       <input type="text" placeholder="Email Id"><br><br>
       <input type="text" placeholder='Mobile Number'><br><br>
@@ -174,8 +191,24 @@
   function reverseColor(){
     login_text.style.color = 'gray';
   }
+/*
+  let first_name = document.getElementById('first_name')
+  let a = first_name.value;
+
+  function f_name(){
+    if (first_name != null) {
+      login_text.textContent = a
+      login_text.style.color = 'green'
+    }
+    else {
+      login_text.textContent = 'Login'
+    }
+    console.log(a)
+  }
+  */
 login_btn.addEventListener('click',showLogin);
 remove.addEventListener('click', removeLogin);
+// remove.addEventListener('click', f_name)
 
 login_btn.addEventListener('mouseover',changeColor)
 login_btn.addEventListener('mouseout', reverseColor)
@@ -185,11 +218,11 @@ login_btn.addEventListener('mouseout', reverseColor)
 /*
  main content 
  step 1: create an array of objects including image , name , quantity & price as properties #complete
- step 2 : append this inside main_content div having 5*2 grid 
- step 3 : append add to cart button also
- step 4 : give this button fuctionality
-       4.1 : if add to cart click first time add object into local storage
-       4.2 : if btn is click more than one time only update the price  of the object 
+ step 2 : append this inside main_content div having 5*2 grid #complete
+ step 3 : append add to cart button also #complete
+ step 4 : give this button fuctionality #complete
+       4.1 : if add to cart click first time add object into local storage #complete
+       4.2 : if btn is click more than one time only update the price  of the object #complete (this is very tricky for me)
 */
 
 let data = [
@@ -206,52 +239,52 @@ let data = [
     image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/FBAN14.png'
   },
   {
-    name : 'Bitter Gourd (Karela)',
-    quantity : '250 g',
-    price : '8',
-    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+    name : 'Cabbage',
+    quantity : '1 pc',
+    price : '10',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VCAB12.png'
   },
   {
-    name : 'Bitter Gourd (Karela)',
-    quantity : '250 g',
-    price : '8',
-    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+    name : 'Onion',
+    quantity : '1 kg',
+    price : '19',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/BONI11.png'
   },
   {
-    name : 'Bitter Gourd (Karela)',
-    quantity : '250 g',
-    price : '8',
-    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+    name : 'Coconut',
+    quantity : '1 pc',
+    price : '30',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/FCOC1.png'
   },
   {
-    name : 'Bitter Gourd (Karela)',
-    quantity : '250 g',
-    price : '8',
-    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+    name : 'Papaya',
+    quantity : '1 pc',
+    price : '29',
+    image : 'https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/092/original/data?1620114635'
   },
   {
-    name : 'Bitter Gourd (Karela)',
-    quantity : '250 g',
-    price : '8',
-    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+    name : 'Ginger',
+    quantity : '100 g',
+    price : '10',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VGIN12.png'
   },
   {
-    name : 'Bitter Gourd (Karela)',
+    name : 'Chikoo',
     quantity : '250 g',
-    price : '8',
-    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+    price : '19',
+    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/FCHI13.png'
   },
   {
-    name : 'Bitter Gourd (Karela)',
-    quantity : '250 g',
-    price : '8',
-    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+    name : 'Pomegranate (Anar)',
+    quantity : '3 Pcs',
+    price : '145',
+    image : 'https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/261/original/data?1612541635'
   },
   {
-    name : 'Bitter Gourd (Karela)',
-    quantity : '250 g',
-    price : '8',
-    image : 'https://fraazo-master.s3.ap-south-1.amazonaws.com/products/VBIT12.png'
+    name : 'Guava White Indian',
+    quantity : '2 Pcs',
+    price : '65',
+    image : 'https://s3.ap-south-1.amazonaws.com/fraazo-prod/products/product_images/000/000/369/original/data?1622631944'
   },
 ]
 let parent = document.getElementById('products')
@@ -261,6 +294,11 @@ function showProduct(data) {
     // console.log(product.name)
 
     let div = document.createElement('div')
+
+    let child_div = document.createElement('div')
+    child_div.setAttribute('class','child_div')
+    let inside_child_div = document.createElement('div')
+    inside_child_div.setAttribute('class','inside_child_div')
 
     let image = document.createElement('img')
     image.src = product.image
@@ -275,15 +313,36 @@ function showProduct(data) {
     product_quantity.textContent = product.quantity
 
     let addtocart_btn = document.createElement('button')
-addtocart_btn.textContent = "Add to cart"
+    addtocart_btn.setAttribute('class','addtocart_btn')
+addtocart_btn.textContent = "Add"
    let counter = 1;
 addtocart_btn.onclick = function(){
   
     addtoCart(product,counter)
     counter++
-
+addtocart_btn.textContent =   counter-1 
+ 
 }
-div.append(image,product_name,product_quantity,product_price,addtocart_btn)
+inside_child_div.append(product_quantity,product_price)
+child_div.append(inside_child_div,addtocart_btn)
+
+div.append(image,product_name,child_div)
+
+addtocart_btn.onmouseover = function(){
+  addtocart_btn.setAttribute('class','addtocart_btn_reverse')
+}
+  
+addtocart_btn.onmouseout = function(){
+  addtocart_btn.setAttribute('class','addtocart_btn')
+}
+
+div.onmouseover = function(){
+  div.style.boxShadow = '-5px 5px 5px rgb(192, 192, 192), 1px -1px 5px rgb(192, 192, 192)'
+}
+div.onmouseout = function(){
+  div.style.boxShadow = 'none'
+}
+
 
 parent.append(div)
   })
@@ -312,7 +371,7 @@ let duplicate = 'No'
           product_cart[i].price = +product.price* counter ;
            
            duplicate = 'Yes'
-          //  console.log('count',counter)
+          //  console.log('count is working',counter)
         }
       
     }
@@ -325,5 +384,118 @@ let duplicate = 'No'
     // console.log(product_cart);
 
 }
+
+//create a div for cart which show only when cart button is pressed in nav-bar  
+    let cart = JSON.parse(localStorage.getItem('fraazo_cart'))
+    let cart_product = document.getElementById('cart_product')
+
+    let sum = 0;
+
+        function showCart() {
+     cart.forEach(function(product){
+       
+      let div = document.createElement('div')
+          let image = document.createElement('img')
+    image.src = product.image
+    image.setAttribute('class','cart_image')
+
+    let product_price = document.createElement('div')
+    product_price.textContent = '₹' + product.price;
+    product_price.setAttribute('class','cart_product_price')
+
+
+    let product_name = document.createElement('p')
+    product_name.textContent = product.name;
+product_name.setAttribute('class','cart_product_name')
+
+    let product_quantity = document.createElement('div')
+    product_quantity.textContent = product.quantity
+    product_quantity.setAttribute('class','cart_product_quantity')
+
+
+
+    let removetocart_btn = document.createElement('button')
+removetocart_btn.textContent = "Remove"
+
+
+removetocart_btn.onclick = function(){
+  removetoCart(product)
+}
+
+div.append(image,product_name,product_quantity,product_price,removetocart_btn)
+
+cart_product.append(div)
+
+
+sum+= Number(product.price)
+     })
+        }
+        showCart() 
+
+        let total_items = document.getElementById('total_items')
+total_items.textContent =  cart.length + ' Items'
+
+let cart_heading = document.getElementById('cart_heading')
+cart_heading.textContent = 'My Cart (' + cart.length + ' items)'
+
+let total_price = document.getElementById('total_price')
+total_price.textContent = '₹ ' + sum;
+
+
+function removetoCart(product) {
+  
+  let product_cart = JSON.parse(localStorage.getItem('fraazo_cart'))
+  let newCart = []
+  /* this logic is very easy but hard to hit in my mind
+       #create an empty array push every thing except common or clicked element 
+      # now just repelace the new array with previous one ,thats it 
+      # last step set element to store in local storage
+*/
+  for (let i = 0 ; i < product_cart.length; i++) {
+    if (product_cart[i].name === product.name) {
+      
+  // console.log(product.name)
+    } else {
+      newCart.push(product_cart[i])
+    }
+  }
+  product_cart = newCart
+  localStorage.setItem('fraazo_cart',JSON.stringify(product_cart))
+}
+
+//cart button functionality
+
+let cart_btn = document.getElementById("cart_btn")
+  let cart_box= document.getElementById("cart_box")
+  let clear = document.getElementById('clear')
+  let cart_text = document.getElementById("cart_text")
+
+function cartBox(){
+  setTimeout(function(){
+    cart_box.style.display = 'block'
+  },1500)
+}
+function removeCartBox(){
+  setTimeout(function(){
+    cart_box.style.display = 'none'
+  },1500)
+}
+function changeCartColor() {
+    cart_text.style.color = 'black'
+  }
+  function reverseCartColor(){
+    cart_text.style.color = 'gray';
+  }
+
+  cart_btn.addEventListener('click',cartBox)
+  clear.addEventListener('click',removeCartBox)
+
+  cart_btn.addEventListener('mouseover',changeCartColor)
+cart_btn.addEventListener('mouseout', reverseCartColor)
+
+
+
+
+
 
 </script>
