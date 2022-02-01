@@ -29,7 +29,7 @@ FRAAZO is an online store for Fresh Vegetables and Fruits coming straight from t
 
 #### Product Details
 
-![image](https://i.ibb.co/nL1PYBz/products.jpg)
+![image](https://i.ibb.co/fxNDy94/products.jpg)
 
 #### Cart
 
